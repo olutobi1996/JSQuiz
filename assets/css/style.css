@@ -80,3 +80,16 @@ header {
     margin-top: 10px;
 }
 
+/* Input Field */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Leaderboard */
+#leaderboard-list {
+    list-style: none;
+    padding: 0;
+}
