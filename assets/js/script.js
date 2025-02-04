@@ -118,3 +118,17 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     leaderboard.push({ initials, score });
     localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
   }
+
+  function showLeaderboard() {
+    document.querySelector("#start-screen").style.display = "none";
+    document.querySelector("#leaderboard-container").style.display = "block";
+    let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+    leaderboard.sort((a, b) => b.score - a.score);
+    let leaderboardList = document.querySelector("#leaderboard-list");
+    leaderboardList.innerHTML = "";
+    leaderboard.forEach(entry => {
+      let listItem = document.createElement("li");
+      listItem.textContent = `${entry.initials} - ${entry.score}`;
+      leaderboardList.appendChild(listItem);
+    });
+  }
