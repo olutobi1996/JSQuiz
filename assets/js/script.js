@@ -29,3 +29,12 @@ const questions = [
       hint: "Famous for nonlinear storytelling."
     },
   ];
+
+let currentQuestionIndex = 0;
+let score = 0;
+let timeLeft = 60;
+let timerInterval;
+
+document.querySelector("#start-button").addEventListener("click", startQuiz);
+document.querySelector("#hint-button").addEventListener("click", showHint);
+document.querySelector("#leaderboard-button").addEventListener("click", showLeaderboard);
