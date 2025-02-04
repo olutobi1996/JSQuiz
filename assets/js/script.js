@@ -98,3 +98,16 @@ document.querySelector("#options-container").addEventListener("click", (event) =
       displayQuestion();
     }, 1000);
   }
+
+  function showHint() {
+    let hint = questions[currentQuestionIndex].hint;
+    document.querySelector("#hint").textContent = `Hint: ${hint}`;
+  }
+  
+  function endQuiz() {
+    clearInterval(timerInterval);
+    document.querySelector("#quiz-container").style.display = "none";
+    document.querySelector("#end-screen").style.display = "block";
+    document.querySelector("#final-score").textContent = `Your Score: ${score}`;
+    saveScore();
+  }
