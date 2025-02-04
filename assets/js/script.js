@@ -66,6 +66,7 @@ let timerInterval;
 document.querySelector("#start-button").addEventListener("click", startQuiz);
 document.querySelector("#hint-button").addEventListener("click", showHint);
 document.querySelector("#leaderboard-button").addEventListener("click", showLeaderboard);
+document.querySelector("#leaderboard-button").style.cursor = "pointer";
 
 document.querySelector("#options-container").addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON") {
@@ -142,7 +143,14 @@ document.querySelector("#options-container").addEventListener("click", (event) =
 
   function saveScore() {
     let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
-    let initials = prompt("Enter your initials:");
+    let initials;
+    do {
+      initials = prompt("Enter your initials:");
+      if (!initials) {
+        alert("Please enter your initials to save your score.");
+      }
+    } while (!initials);
+    
     leaderboard.push({ initials, score });
     localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
   }
