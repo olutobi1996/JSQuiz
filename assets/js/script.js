@@ -82,3 +82,19 @@ document.querySelector("#options-container").addEventListener("click", (event) =
       optionsContainer.appendChild(button);
     });
   }
+
+  function checkAnswer(selectedOption) {
+    let correctAnswer = questions[currentQuestionIndex].answer;
+    if (selectedOption === correctAnswer) {
+      score += 10;
+      document.querySelector("#feedback").textContent = "Correct! 🎉";
+    } else {
+      timeLeft -= 5;
+      document.querySelector("#feedback").textContent = "Wrong! ⛔";
+    }
+    setTimeout(() => {
+      document.querySelector("#feedback").textContent = "";
+      currentQuestionIndex++;
+      displayQuestion();
+    }, 1000);
+  }
