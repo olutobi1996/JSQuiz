@@ -8,3 +8,13 @@ body {
     padding: 0;
 }
 
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+
+
