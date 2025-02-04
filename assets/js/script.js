@@ -111,3 +111,10 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     document.querySelector("#final-score").textContent = `Your Score: ${score}`;
     saveScore();
   }
+
+  function saveScore() {
+    let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+    let initials = prompt("Enter your initials:");
+    leaderboard.push({ initials, score });
+    localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+  }
