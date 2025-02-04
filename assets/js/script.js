@@ -28,7 +28,35 @@ const questions = [
       answer: "Quentin Tarantino",
       hint: "Famous for nonlinear storytelling."
     },
-  ];
+    {
+        category: "Science",
+        questionText: "What is the chemical symbol for gold?",
+        options: ["Au", "Ag", "Pb", "Fe"],
+        answer: "Au",
+        hint: "It comes from the Latin word 'Aurum'."
+      },
+      {
+        category: "Geography",
+        questionText: "Which is the largest ocean on Earth?",
+        options: ["Atlantic", "Indian", "Arctic", "Pacific"],
+        answer: "Pacific",
+        hint: "It covers more than 60 million square miles."
+      },
+      {
+        category: "History",
+        questionText: "Who was the first President of the United States?",
+        options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"],
+        answer: "George Washington",
+        hint: "He appears on the US one-dollar bill."
+      },
+      {
+        category: "Technology",
+        questionText: "What does 'CPU' stand for in computing?",
+        options: ["Central Processing Unit", "Computer Power Unit", "Central Peripheral Unit", "Core Processing Utility"],
+        answer: "Central Processing Unit",
+        hint: "It's often called the 'brain' of the computer."
+      }
+    ];
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -133,13 +161,22 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     });
   }
 
-  // Reset Game
+// Reset Game and Return to Start Screen
 function resetGame() {
     currentQuestionIndex = 0;
     score = 0;
     timeLeft = 60;
+    clearInterval(timerInterval);
+    
+    // Hide all screens
     document.querySelector("#end-screen").style.display = "none";
+    document.querySelector("#leaderboard-container").style.display = "none";
+    
+    // Show start screen
     document.querySelector("#start-screen").style.display = "block";
   }
   
+  // Ensure both restart buttons work correctly
   document.querySelector("#restart-button").addEventListener("click", resetGame);
+  document.querySelector("#back-to-start-button").addEventListener("click", resetGame);
+  
