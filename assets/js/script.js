@@ -51,4 +51,13 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     displayQuestion();
     startTimer();
   }
-  
+
+  function startTimer() {
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      document.querySelector("#timer").textContent = `Time Left: ${timeLeft}s`;
+      if (timeLeft <= 0) {
+        endQuiz();
+      }
+    }, 1000);
+  }
