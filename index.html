@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Advanced Quiz Game</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <title>Advanced Quiz Game</title>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <a id="leaderboard-button">View Leaderboard</a>
-        <span id="timer">Time Left: 60s</span>
-    </header>
+   <!-- Header -->
+   <header>
+      <a id="leaderboard-button">View Leaderboard</a>
+      <span id="timer">Time Left: 60s</span>
+   </header>
 
-    <main>
+   <main>
 
-        <!-- Start Screen -->
-        <div id="start-screen" class="card">
-            <h2>Welcome to the General Knowledge Quiz</h2>
-            <p>Test your knowledge across different categories! <br><br> Be quick, as incorrect answers will cost you
-                time!</p>
-            <button id="start-button" class="button">Start Quiz</button>
-        </div>
+      <!-- Start Screen -->
+      <div id="start-screen" class="card">
+         <h2>Welcome to the General Knowledge Quiz</h2>
+         <p>Test your knowledge across different categories! <br><br> Be quick, as incorrect answers will cost you time!</p>
+         <button id="start-button" class="button">Start Quiz</button>
+      </div>
 
-        <!-- Quiz Section -->
-        <div hidden id="quiz-container" class="card">
-            <h2 id="category">Category: </h2>
-            <h3 id="question-text">...</h3>
+      <!-- Quiz Section -->
+      <div hidden id="quiz-container" class="card">
+         <h2 id="category">Category: </h2>
+         <h3 id="question-text">...</h3>
 
-            <div id="options-container">
-                <!-- Options will be generated dynamically -->
-            </div>
+         <div id="options-container">
+            <!-- Options will be generated dynamically -->
+         </div>
 
-            <button id="hint-button" class="button">Get a Hint</button>
-            <p id="hint"></p>
+         <button id="hint-button" class="button">Get a Hint</button>
+         <p id="hint"></p>
 
-            <div id="feedback"></div>
-        </div>
+         <div id="feedback"></div>
+      </div>
+
+      <!-- End Screen -->
+      <div hidden id="end-screen" class="card">
+         <h2>Quiz Over!</h2>
+         <p id="final-score"></p>
+         <button id="restart-button" class="button">Restart Quiz</button>
+      </div>
+
+      <!-- Leaderboard -->
+      <div hidden id="leaderboard-container" class="card">
+         <h2>Leaderboard</h2>
+         <ol id="leaderboard-list">
+         </ol>
+         <button id="restart-button" class="button">Back to Start</button>
+      </div>
+
+   </main>
