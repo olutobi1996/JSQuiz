@@ -61,3 +61,24 @@ document.querySelector("#options-container").addEventListener("click", (event) =
       }
     }, 1000);
   }
+
+  function displayQuestion() {
+    if (currentQuestionIndex >= questions.length) {
+      endQuiz();
+      return;
+    }
+  
+    let question = questions[currentQuestionIndex];
+    document.querySelector("#question-text").textContent = question.questionText;
+    document.querySelector("#category").textContent = `Category: ${question.category}`;
+  
+    let optionsContainer = document.querySelector("#options-container");
+    optionsContainer.innerHTML = "";
+  
+    question.options.forEach(option => {
+      let button = document.createElement("button");
+      button.textContent = option;
+      button.classList.add("option-button");
+      optionsContainer.appendChild(button);
+    });
+  }
