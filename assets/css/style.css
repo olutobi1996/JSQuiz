@@ -93,3 +93,16 @@ input[type="text"] {
     list-style: none;
     padding: 0;
 }
+
+#leaderboard-list li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
