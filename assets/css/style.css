@@ -17,4 +17,9 @@ header {
     font-size: 18px;
 }
 
+#timer {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffcc00;
+}
 
