@@ -132,3 +132,14 @@ document.querySelector("#options-container").addEventListener("click", (event) =
       leaderboardList.appendChild(listItem);
     });
   }
+
+  // Reset Game
+function resetGame() {
+    currentQuestionIndex = 0;
+    score = 0;
+    timeLeft = 60;
+    document.querySelector("#end-screen").style.display = "none";
+    document.querySelector("#start-screen").style.display = "block";
+  }
+  
+  document.querySelector("#restart-button").addEventListener("click", resetGame);
