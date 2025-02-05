@@ -42,20 +42,56 @@ A dynamic and interactive quiz game built using **JavaScript, HTML, and CSS**. T
 
 ### 📌 Questions Array
 
-const questions = [
-    {
-      category: "Sports",
-      questionText: "What football team won the World Cup in 1966?",
-      options: ["Brazil", "England", "France", "Italy"],
-      answer: "England",
-      hint: "It's a European team."
-    },
-    ...
-];
-
 Stores quiz questions, categories, answer choices, correct answers, and hints.
 
+📌 Game Variables 
+currentQuestionIndex: Tracks the current question.
+score: Stores the player's score.
+timeLeft: Countdown timer (60 seconds).
+timerInterval: Controls the timer function. 
 
+📌 Event Listeners 
+Listens for user clicks to start the quiz, view hints, and open the leaderboard.
+
+📌 Start Quiz
+Hides the start screen.
+Displays the quiz container.
+Calls displayQuestion() to load the first question.
+Starts the countdown timer.
+
+📌 Display Question
+Fetches the current question.
+Updates the category, question text, and answer choices.
+Creates buttons dynamically for each option.
+
+📌 Answer Checking
+Checks if the selected answer matches the correct one.
+If correct → +10 points.
+If incorrect → -5 seconds from the timer.
+Moves to the next question after 1 second.
+
+📌 Timer Function
+Counts down from 60 seconds.
+Updates the timer display every second.
+Ends the quiz when time reaches zero.
+
+📌 Show Hint
+Displays a hint for the current question.
+
+📌 End Quiz & Save Score
+Stops the timer.
+Displays the final score.
+Calls saveScore() to store the result.
+Saves player initials and score to localStorage.
+If no initials are entered, it prompts again.
+
+📌 Show Leaderboard
+Fetches and displays the leaderboard.
+Sorts scores in descending order.
+
+📌 Reset Game
+Resets score, timer, and question index.
+Returns to the start screen.
 
 ### Manual Testing Steps
 | Testcase                          | Expected Result                                                       | Test Result |
