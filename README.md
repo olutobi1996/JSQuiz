@@ -102,6 +102,30 @@ __Footer__
 ### Start Quiz Function
 - I also had some issues with start quiz function it wasnt doing anything and one point. I found out i hadnt been calling it in my correct function and used the advent listner so when the user would click it, there would be interactivity.
 
+### Unfixed Bugs
+There were no unfixed bugs in the final code. But in JSHint there were version errors found, if the software was not up to date the javascript on that particular machine may not work.
+
+## Deployment
+
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the main branch
+  - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+The live link can be found here - 
+
+
+## Credits 
+The general knowledge quiz was partly inspired by code institue project module walk through 2, this project i done as a practice walk through helped me get more understanding on how javascript worked. As this is a completely new language for me it helped me go through back through the javascript essentials module and get more understanding on how to write functions, call functions and correct syntax of writing variables and different elements for the quiz game.
+
+### Content 
+- General Knowledge Quiz Questions were made up by me
+
+### Media 
+https://mailtrap.io/blog/mailto-links-explained/ - i used this for my footer element for people to email me.
+
 ## 🚀 Installation & Usage
 
 1. **Clone the repository**  
