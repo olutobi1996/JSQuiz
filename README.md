@@ -25,3 +25,28 @@ A dynamic and interactive quiz game built using **JavaScript, HTML, and CSS**. T
 4. The game ends when all questions are answered or time runs out.  
 5. Enter your initials to save your score on the **Leaderboard**.  
 6. View high scores and replay as many times as you like!
+
+### Manual Testing Steps
+| Testcase                          | Expected Result                                                       | Test Result |
+|-----------------------------------|-----------------------------------------------------------------------|-------------|
+| Open the Quiz                     | The Quiz loads with the correct template and data                     | ✅ PASS          |
+| Start Quiz                        | Start Quiz button is successful, quiz appears for user                | ✅ PASS          |
+| User clicks question              | Correct answer is chose and incorrect answer time will be penlized    | ✅ PASS          |
+| Timer                             | Timer runs down from 60seconds and if answer is incorrect, time effect| ✅ PASS          |
+| Enter user initials               | Pop up message will appear if user doesnt enter details               | ✅ PASS          |
+| View Highscores                   | View Highscores link in top left of page takes you to leaderboard     | ✅ PASS          |
+|Go Back                            | Go back button takes you back to start of quiz                        | ✅ PASS          |
+|Clear Highscores                   | Clear high scores will clear away all high scores on the page         | ✅ PASS          |
+| Email Link                        | Click the link and it takes you to mail options                        | ✅ PASS          |
+|                              
+| **Testing**                       |                                                                       |             |
+| HTML                              | HTML Validator Testing Passed                                         | ✅ PASS          |
+| CSS                               | CSS Validator Testing Passed                                          | ✅ PASS          |
+| Javascript                        | Javascript Validator Testing Passed                                   | ✅ PASS          |
+
+
+## 🚀 Installation & Usage
+
+1. **Clone the repository**  
+   ```sh
+   git clone https://github.com/olutobi1996/JSQuiz.git
