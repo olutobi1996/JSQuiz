@@ -115,15 +115,16 @@ Returns to the start screen.
    # Quiz Game
  Quiz game is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also general knowledge questions. Quiz Game is a fully responsive JavaScript Quiz Game that will allow users to challenge their general knowledge. It does this by asking the user of the website 6 random general knowledge quiz questions.
 
-
+![Image](https://github.com/user-attachments/assets/1c1f7976-f133-40d2-9dd1-15c9467bbe32)
 
 
 ### Existing Features
 
 The Quiz Game Homepage and Heading
 
-Featured in the middle of the page, the Quiz Game logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game with a little message saying "Every incorrect answers will effect your score/time by ten seconds! GOOD LUCK!". I Have created this in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript. H2 and P elements have been used for the text.
+Featured in the middle of the page, the Quiz Game logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game with a little message saying "Test your knowledge across different categories!Be quick, as incorrect answers will cost you time!". I Have created this in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript. H2 and P & BR elements have been used for the text.
 
+![Image](https://github.com/user-attachments/assets/6b949f94-79bb-4bfd-9d71-7bd53ee37871)
 
 - __The Question & Answer Section__
 
