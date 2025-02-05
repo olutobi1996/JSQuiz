@@ -153,8 +153,11 @@ __Footer__
 - I have added my personal details with my name and email at the bottom of the quiz for anybody who would like to speak to me personally about the game and is interested in my work, this has been created in my index.html using mailto href.
 
 ### Features Left to Implement
-
-- Another feature idea for the future of the website is to do add more questions if the user gets them all correct and everytime the user gets them correct the time will go up.
+🔗 Future Improvements
+✅ More questions & categories
+✅ Difficulty levels
+✅ Sound effects & animations
+✅ Multiplayer mode
 
 ## Testing 
 

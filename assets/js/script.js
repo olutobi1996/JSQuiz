@@ -1,4 +1,4 @@
-// Quiz Questions
+// Stores quiz questions, categories, answer choices, correct answers, and hints.
 const questions = [
     {
       category: "Sports",
@@ -58,11 +58,13 @@ const questions = [
       }
     ];
 
+// Game Variables 
 let currentQuestionIndex = 0;
 let score = 0;
 let timeLeft = 60;
 let timerInterval;
 
+// Game event listners 
 document.querySelector("#start-button").addEventListener("click", startQuiz);
 document.querySelector("#hint-button").addEventListener("click", showHint);
 document.querySelector("#leaderboard-button").addEventListener("click", showLeaderboard);
@@ -74,6 +76,7 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     }
   });
   
+// Hides the start screen, displays the quiz container.
   function startQuiz() {
     document.querySelector("#start-screen").style.display = "none";
     document.querySelector("#quiz-container").style.display = "block";
@@ -81,6 +84,7 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     startTimer();
   }
 
+  // Counts down from 60 seconds
   function startTimer() {
     timerInterval = setInterval(() => {
       timeLeft--;
@@ -91,6 +95,7 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     }, 1000);
   }
 
+  // Fetches the current question. 
   function displayQuestion() {
     if (currentQuestionIndex >= questions.length) {
       endQuiz();
@@ -112,6 +117,7 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     });
   }
 
+  // Checks if the selected answer matches the correct one, if correct add 10s, if not -5s
   function checkAnswer(selectedOption) {
     let correctAnswer = questions[currentQuestionIndex].answer;
     if (selectedOption === correctAnswer) {
@@ -128,11 +134,13 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     }, 1000);
   }
 
+  // 
   function showHint() {
     let hint = questions[currentQuestionIndex].hint;
     document.querySelector("#hint").textContent = `Hint: ${hint}`;
   }
-  
+
+  // Stops the timer. Displays the final score. 
   function endQuiz() {
     clearInterval(timerInterval);
     document.querySelector("#quiz-container").style.display = "none";
@@ -141,6 +149,7 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     saveScore();
   }
 
+  // Saves player initials and score to localStorage.
   function saveScore() {
     let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
     let initials;
@@ -155,6 +164,7 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
   }
 
+  // Fetches and displays the leaderboard, sorts scores
   function showLeaderboard() {
     document.querySelector("#start-screen").style.display = "none";
     document.querySelector("#leaderboard-container").style.display = "block";
