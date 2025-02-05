@@ -26,6 +26,37 @@ A dynamic and interactive quiz game built using **JavaScript, HTML, and CSS**. T
 5. Enter your initials to save your score on the **Leaderboard**.  
 6. View high scores and replay as many times as you like!
 
+## 🎮 How to Play
+
+1. Click the **"Start Quiz"** button to begin.
+2. Answer the questions before time runs out.
+3. Click **"Hint"** for a clue (if needed).
+4. Each correct answer earns **10 points**.
+5. Incorrect answers reduce **5 seconds** from the timer.
+6. The game ends when all questions are answered or the timer reaches zero.
+7. Enter initials to save your score on the **leaderboard**.
+
+---
+
+## 🛠️ Code Breakdown
+
+### 📌 Questions Array
+
+const questions = [
+    {
+      category: "Sports",
+      questionText: "What football team won the World Cup in 1966?",
+      options: ["Brazil", "England", "France", "Italy"],
+      answer: "England",
+      hint: "It's a European team."
+    },
+    ...
+];
+
+Stores quiz questions, categories, answer choices, correct answers, and hints.
+
+
+
 ### Manual Testing Steps
 | Testcase                          | Expected Result                                                       | Test Result |
 |-----------------------------------|-----------------------------------------------------------------------|-------------|
