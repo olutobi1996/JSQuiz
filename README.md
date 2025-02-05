@@ -199,7 +199,9 @@ This section should describe the process you went through to deploy the project 
   - From the source section drop-down menu, select the main branch
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - 
+### Live Link 
+
+The live link can be found here - https://olutobi1996.github.io/JSQuiz/
 
 ### Validator Testing 
 
@@ -231,7 +233,4 @@ The general knowledge quiz was partly inspired by code institue project module w
 https://mailtrap.io/blog/mailto-links-explained/ - i used this for my footer element for people to email me.
 
 ## 🚀 Installation & Usage
-
-1. **Clone the repository**  
-   ```sh
-   git clone https://github.com/olutobi1996/JSQuiz.git
+https://github.com/olutobi1996/JSQuiz.git
