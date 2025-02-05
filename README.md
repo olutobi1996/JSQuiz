@@ -124,34 +124,48 @@ The Quiz Game Homepage and Heading
 
 Featured in the middle of the page, the Quiz Game logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game with a little message saying "Test your knowledge across different categories!Be quick, as incorrect answers will cost you time!". I Have created this in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript. H2 and P & BR elements have been used for the text.
 
-![Image](https://github.com/user-attachments/assets/6b949f94-79bb-4bfd-9d71-7bd53ee37871)
+![Image](https://github.com/user-attachments/assets/24401492-bca3-40f0-909c-ee4f8be4c2e5)
 
 - __The Question & Answer Section__
 
 -This section will allow the user to play the quiz game. The user will be able to easily see the questions for the quiz game.
 -The user will be able to select the question answer of there choice below the question, i have used a multiple choice layout format. Also as an addition to make the quiz more exciting i have used a javascript time function, everytime the user answers the question wrong there time will be effected by 10s. I Have also created the question section in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript. The answers have also been created using option buttons in my index.html and check answer (event object) function has been created using an if statment to check the users answer is correct 
 
+![Image](https://github.com/user-attachments/assets/1ce75eb4-4cb3-43e0-8085-a69849b7fc64)
 
+- __Hint Section__
+The hint section provides players with a clue for the current question to help them answer correctly. When the "Hint" button is clicked, the game displays a short hint related to the correct answer. This feature is useful for players who may be unsure and need an extra nudge in the right direction. Each question in the quiz has a pre-defined hint stored in the questions array. When the "Hint" button is clicked, the showHint() function retrieves and displays the hint.
+The hint appears below the question, providing additional context without revealing the answer outright.
 
+![Image](https://github.com/user-attachments/assets/f1a51d76-3bde-4c9d-8e7d-d772c68e7798)
 
-- __The Score Area__
-
-When the quiz has finished by either time running out or questions are finished, you will be automatically shown a message saying "Well done". Beneth this message you will be shown a message saying "your final score is...(whatever your final score is"). Then beneth this message you will be given a message saying "Enter your initials" with a text box to enter in your initals, also if you do not enter your initials you will be given a pop up message aswell saying "Please enter your initials before pressing submit!". I have used index.html to create my div element with ids in it & one of these ids are hidden id that will be called in my javascript. Within the div element i have created another h2 and p element for the text that the user sees. I have then styled these in my css. I have then created an end quiz function in my js and have called the hidden attribute and hide cards attribue to clear any visable cards at the end of the quiz and show the the final score. I also used a if loop for the submit initals text inside a storescore function and also within this prevent default to prevent behaviour of form submission.
-
+- __Leaderboard & The Score Area__
+-I have created a leaderboard function where the score will be stored in locallly in a JSON file storage, this leaderboard function will allow other users to use the quiz and there scores to be stored. I have also used a get Leaderboard function to get "leaderboardArray" from local storage (if it exists) and parse it into a javascript object using JSON.parse. This will use an if loop to check if the leaderboard is equal to null. I Also have a sort leaderboard and render leaderboard fucntion which will use document query selector to find highscores and display it while also using an if statement to sore the order of leaderboard.
+![Image](https://github.com/user-attachments/assets/2f3199de-a8fa-460e-bb9b-14b8afaa6853) 
+![Image](https://github.com/user-attachments/assets/999fffba-0955-46b4-8bbe-9e4cf498c9bf)
 
  __Quiz Timer__
 
 -This section the user will see a timer count down from 60seconds in the top right of the page, this is the amount of time the user will have to finish unless they get there questions wrong which means there time will be penelized. I have created the time function in my javascript using an if loop.
 
+![Image](https://github.com/user-attachments/assets/bc21f467-a32d-4bf7-8853-63bf12b13e0b)
 
 
+ __End Quiz, Your Score & Restart Quiz__
+When the quiz has finished by either time running out or questions are finished, you will be automatically shown a message saying "Quiz Over! Your Score: ...".  I have used index.html to create my div element with ids in it & one of these ids are hidden id that will be called in my javascript. Within the div element i have created another h2 and p element for the text that the user sees. I have then styled these in my css. I have then created an end quiz function in my js and have called the hidden attribute and hide cards attribue to clear any visable cards at the end of the quiz and show the the final score. I also used a if loop for the submit initals text inside a storescore function and also within this prevent default to prevent behaviour of form submission.
+![Image](https://github.com/user-attachments/assets/46221a3b-3cc5-48d4-a659-477c5a4092f0)
 
- __Highscores & Restart Quiz__
--I have created a leaderboard function where the score will be stored in locallly in a JSON file storage, this leaderboard function will allow other users to use the quiz and there scores to be stored. I have also used a get Leaderboard function to get "leaderboardArray" from local storage (if it exists) and parse it into a javascript object using JSON.parse. This will use an if loop to check if the leaderboard is equal to null. I Also have a sort leaderboard and render leaderboard fucntion which will use document query selector to find highscores and display it while also using an if statement to sore the order of leaderboard.
+__Enter Initials & Pop up message__
+At the end of the quiz, players can save their score to the leaderboard. To do this, the game prompts them to enter their initials using a pop-up message (prompt box). This allows the game to store their score and display it later on the leaderboard.When the quiz ends, the endQuiz() function is triggered.The function clears the timer, hides the quiz interface, and displays the final score. The saveScore() function is then called, which prompts the player to enter their initials using a JavaScript prompt() function. If the player does not enter initials, an alert reminds them to do so.
+Once initials are entered, the game saves the score to localStorage, ensuring that it persists even after the page is refreshed.
+
+![Image](https://github.com/user-attachments/assets/cab8fb44-e239-4bd9-ad12-9147ee1941e2)
+![Image](https://github.com/user-attachments/assets/1e409bf8-e6aa-4d02-ac69-1cb4a1f30298)
 
 
 __Footer__
 - I have added my personal details with my name and email at the bottom of the quiz for anybody who would like to speak to me personally about the game and is interested in my work, this has been created in my index.html using mailto href.
+![Image](https://github.com/user-attachments/assets/6768ae48-5ae9-4da8-98c8-66d98f5a8df2)
 
 ### Features Left to Implement
 🔗 Future Improvements
@@ -187,6 +201,17 @@ This section should describe the process you went through to deploy the project 
 
 The live link can be found here - 
 
+### Validator Testing 
+
+- HTML
+  - No errors were returned when passing through the official [W3C validator] https://validator.w3.org/nu/?doc=https%3A%2F%2Folutobi1996.github.io%2FJavascriptGeneralKnowledge%2F
+- CSS
+  - No errors were found when passing through the official [(Jigsaw)] https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Folutobi1996.github.io%2FJavascriptGeneralKnowledge%2F
+
+- JavaScript
+No errors were found when passing through the official Jshint validator
+The following metrics were returned:
+![image](https://github.com/user-attachments/assets/dddf5ef9-a26d-43f7-b975-e33b16f235da) 
 
 ## Credits 
 The general knowledge quiz was partly inspired by code institue project module walk through 2, this project i done as a practice walk through helped me get more understanding on how javascript worked. As this is a completely new language for me it helped me go through back through the javascript essentials module and get more understanding on how to write functions, call functions and correct syntax of writing variables and different elements for the quiz game.
