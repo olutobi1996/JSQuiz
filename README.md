@@ -85,6 +85,23 @@ When the quiz has finished by either time running out or questions are finished,
 __Footer__
 - I have added my personal details with my name and email at the bottom of the quiz for anybody who would like to speak to me personally about the game and is interested in my work, this has been created in my index.html using mailto href.
 
+### Features Left to Implement
+
+- Another feature idea for the future of the website is to do add more questions if the user gets them all correct and everytime the user gets them correct the time will go up.
+
+## Testing 
+
+- The website has been tested numerous times to make sure the user has an easy and enjoyable experience, along the project i opened the website in the browser and used devtools to check everything was running smoothly. I Also used console.log to make sure certain elements of the quiz were being logged and working with the computer.
+
+## Questions & Answers
+- Starting with the questions and answers, i had a slight issue at the start with displaying the answers as during the start i had both the answer buttons i created in html and also there answers i had created in javascript, after putting the answers into the correct function i was able to over come this.
+- 
+## Clear Score Function
+- I then also had issues with my clear score button, i was able to display the clear score button in the browser but it wouldnt work, I overcame this problem by fixing the clear score function in my javascript.
+
+### Start Quiz Function
+- I also had some issues with start quiz function it wasnt doing anything and one point. I found out i hadnt been calling it in my correct function and used the advent listner so when the user would click it, there would be interactivity.
+
 ## 🚀 Installation & Usage
 
 1. **Clone the repository**  
