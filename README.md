@@ -204,14 +204,22 @@ The live link can be found here -
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator] https://validator.w3.org/nu/?doc=https%3A%2F%2Folutobi1996.github.io%2FJavascriptGeneralKnowledge%2F
+  - No errors were returned when passing through the official [W3C validator] ![Image](https://github.com/user-attachments/assets/4cb900bf-1743-4d4f-964b-0f9e3abec38f)
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Folutobi1996.github.io%2FJSQuiz%2F
 - CSS
-  - No errors were found when passing through the official [(Jigsaw)] https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Folutobi1996.github.io%2FJavascriptGeneralKnowledge%2F
+  - No errors were found when passing through the official [(Jigsaw)] ![Image](https://github.com/user-attachments/assets/e1112242-2fa5-4dc6-9cba-48db4bbe36d2) https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Folutobi1996.github.io%2FJSQuiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 
 - JavaScript
 No errors were found when passing through the official Jshint validator
-The following metrics were returned:
-![image](https://github.com/user-attachments/assets/dddf5ef9-a26d-43f7-b975-e33b16f235da) 
+The following metrics were returned: There are 15 functions in this file.
+
+Function with the largest signature take 2 arguments, while the median is 0.
+
+Largest function has 9 statements in it, while the median is 4.
+
+The most complex function has a cyclomatic complexity value of 4 while the median is 1.
+ ![Image](https://github.com/user-attachments/assets/eae56e6f-6211-442f-ad35-4d81d443c59a)
+
 
 ## Credits 
 The general knowledge quiz was partly inspired by code institue project module walk through 2, this project i done as a practice walk through helped me get more understanding on how javascript worked. As this is a completely new language for me it helped me go through back through the javascript essentials module and get more understanding on how to write functions, call functions and correct syntax of writing variables and different elements for the quiz game.
