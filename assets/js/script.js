@@ -84,38 +84,39 @@ document.querySelector("#options-container").addEventListener("click", (event) =
     startTimer();
   }
 
-  // Counts down from 60 seconds
-  function startTimer() {
-    timerInterval = setInterval(() => {
-      timeLeft--;
-      document.querySelector("#timer").textContent = `Time Left: ${timeLeft}s`;
-      if (timeLeft <= 0) {
-        endQuiz();
-      }
-    }, 1000);
+ 
+// Fetches the current question. 
+function displayQuestion() {
+  if (currentQuestionIndex >= questions.length) {
+    endQuiz();
+    return;
   }
 
-  // Fetches the current question. 
-  function displayQuestion() {
-    if (currentQuestionIndex >= questions.length) {
-      endQuiz();
-      return;
-    }
-  
-    let question = questions[currentQuestionIndex];
-    document.querySelector("#question-text").textContent = question.questionText;
-    document.querySelector("#category").textContent = `Category: ${question.category}`;
-  
-    let optionsContainer = document.querySelector("#options-container");
-    optionsContainer.innerHTML = "";
-  
-    question.options.forEach(option => {
-      let button = document.createElement("button");
-      button.textContent = option;
-      button.classList.add("option-button");
-      optionsContainer.appendChild(button);
-    });
-  }
+  let question = questions[currentQuestionIndex];
+  document.querySelector("#question-text").textContent = question.questionText;
+  document.querySelector("#category").textContent = `Category: ${question.category}`;
+
+  let optionsContainer = document.querySelector("#options-container");
+  optionsContainer.innerHTML = "";
+
+  // Clear the hint when moving to a new question
+  document.querySelector("#hint").textContent = "";
+
+  question.options.forEach(option => {
+    let button = document.createElement("button");
+    button.textContent = option;
+    button.classList.add("option-button");
+    optionsContainer.appendChild(button);
+  });
+}
+
+// Show hint for the current question only
+function showHint() {
+  let hintElement = document.querySelector("#hint");
+  let hint = questions[currentQuestionIndex].hint;
+  hintElement.textContent = `Hint: ${hint}`;
+}
+
 
   // Checks if the selected answer matches the correct one, if correct add 10s, if not -5s
   function checkAnswer(selectedOption) {
