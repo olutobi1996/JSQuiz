@@ -64,6 +64,22 @@ let score = 0;
 let timeLeft = 60;
 let timerInterval;
 
+// Start Timer Function
+function startTimer() {
+  // Clear any existing interval to prevent multiple timers from running
+  clearInterval(timerInterval);
+
+  timerInterval = setInterval(() => {
+      if (timeLeft > 0) {
+          timeLeft--;
+          document.querySelector("#timer").textContent = `Time Left: ${timeLeft}s`;
+      } else {
+          clearInterval(timerInterval);
+          endQuiz();
+      }
+  }, 1000);
+}
+
 // Game event listners 
 document.querySelector("#start-button").addEventListener("click", startQuiz);
 document.querySelector("#hint-button").addEventListener("click", showHint);
@@ -118,22 +134,29 @@ function showHint() {
 }
 
 
-  // Checks if the selected answer matches the correct one, if correct add 10s, if not -5s
-  function checkAnswer(selectedOption) {
-    let correctAnswer = questions[currentQuestionIndex].answer;
-    if (selectedOption === correctAnswer) {
+function checkAnswer(selectedOption) {
+  let correctAnswer = questions[currentQuestionIndex].answer;
+
+  if (selectedOption === correctAnswer) {
       score += 10;
+      timeLeft += 10; // Add time for correct answers
       document.querySelector("#feedback").textContent = "Correct! 🎉";
-    } else {
-      timeLeft -= 5;
+  } else {
+      timeLeft -= 5; // Deduct time for wrong answers
       document.querySelector("#feedback").textContent = "Wrong! ⛔";
-    }
-    setTimeout(() => {
+  }
+
+  setTimeout(() => {
       document.querySelector("#feedback").textContent = "";
       currentQuestionIndex++;
-      displayQuestion();
-    }, 1000);
-  }
+      if (currentQuestionIndex < questions.length) {
+          displayQuestion();
+      } else {
+          endQuiz();
+      }
+  }, 1000);
+}
+
 
   // 
   function showHint() {
